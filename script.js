@@ -55,13 +55,24 @@ function calGPA(grade, credits) {
     return sum / totalCredits
 }
 
+function renderResult(gpa) {
+    if (gpa) {
+        resultEl.textContent = gpa.toFixed(2)
+    } else {
+        resultEl.textContent = "Something's Wrong. Check your inputs."
+    }
+}
+
 calculateBtnEl.addEventListener("click", () => {
-    marks = getMarks()
-    credits = getCredits()
+    getMarks()
+    getCredits()
     grade = marks.map(calGradePoints)
     gpa = calGPA(grade, credits)
+    grade = []
+    credits = []
+    marks = []
 
-    resultEl.textContent = gpa.toFixed(2)
+    renderResult(gpa)
 })
 
 addCourseEl.addEventListener("click", () => {
