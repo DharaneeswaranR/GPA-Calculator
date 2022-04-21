@@ -11,12 +11,47 @@ body {
     align-items: center;
 }
 
+.table {
+    width: 100%;
+}
+
 .container {
-    border: 1px solid black;
+    margin: 100px auto;
+    padding: 10px;
+    width: 500px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 
 .input-container {
+    width: 100%;
+    justify-content: space-between;
     display: flex;
+}
+
+input {
+    margin: 5px 0;
+    padding: 5px;
+}
+
+button {
+    width: 100%;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+hr {
+    width: 100%;
+    border-top-width: 1px;
+}
+
+.input-marks {
+    width: 280px;
+}
+
+.input-credits {
+    width: 210px;
 }
 
 
