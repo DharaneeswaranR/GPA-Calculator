@@ -20,7 +20,7 @@ body {
     padding: 10px;
     width: 500px;
     border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px 0px;
 }
 
 .input-container {
@@ -68,6 +68,14 @@ hr {
 
 .input-credits {
     width: 210px;
+}
+
+.result-container {
+    text-align: center;
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 6px;
+    border: 2px solid rgba(53, 47, 47, 0.486);
 }
 
 
