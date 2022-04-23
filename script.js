@@ -2,6 +2,7 @@ const contentEl = document.querySelector(".table")
 const addCourseEl = document.getElementById("add-course")
 const calculateBtnEl = document.getElementById("calculate-btn")
 const resultEl = document.getElementById("result")
+const resultCont = document.querySelector(".result-container")
 
 let marks = []
 let credits = []
@@ -41,6 +42,7 @@ function calGradePoints(marks) {
         return 7
     if (marks >= 50 && marks <= 59)
         return 6
+    return 0
 }
 
 function calGPA(grade, credits) {
@@ -56,10 +58,21 @@ function calGPA(grade, credits) {
 }
 
 function renderResult(gpa) {
-    if (gpa) {
-        resultEl.textContent = gpa.toFixed(2)
+    resultCont.style.color = "white"
+    resultCont.style.border = "none"
+
+    if (gpa || gpa == 0) {
+        if (gpa > 5) {
+            resultEl.textContent = `Your GPA is ${gpa.toFixed(2)}`
+            resultCont.style.background = "green"
+        } else {
+            resultEl.textContent = "Fail"
+            resultCont.style.background = "red"
+        }
+        
     } else {
         resultEl.textContent = "Something's Wrong. Check your inputs."
+        resultCont.style.background = "orange"
     }
 }
 
